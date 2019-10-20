@@ -25,6 +25,26 @@ class IanViewController: UIViewController {
         theLabel.text = myLabelData
     }
     
+    @IBAction func addToFavs(_ sender: Any) {
+        let dbPath = Bundle.main.path(forResource: "favoriteMovies", ofType: "db")
+        let contactDB = FMDatabase(path: dbPath)
+        
+        if !(contactDB.open()){
+            print("Unable to open DB")
+            return
+        } else {
+            do {
+                print("I am here")
+                try contactDB.executeUpdate("insert into moviess (title) values(?)", values: [theLabel.text ?? ""])
+            } catch let error as NSError {
+                print("failed \(error)")
+            }
+        }
+        contactDB.close()
+    
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

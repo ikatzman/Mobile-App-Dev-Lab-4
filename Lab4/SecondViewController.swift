@@ -78,7 +78,21 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let dbPath = Bundle.main.path(forResource: "favoriteMovies", ofType: "db")
+        let contactDB = FMDatabase(path: dbPath)
+        
         if editingStyle == UITableViewCell.EditingStyle.delete {
+            if !(contactDB.open()){
+                print("Unable to open DB")
+                return
+            } else {
+                do {
+                    try contactDB.executeUpdate("delete from moviess where title = ?", values: ["\(myArray[indexPath.row].title)"])
+                } catch let error as NSError {
+                    print("failed \(error)")
+                }
+            }
+            contactDB.close()
             myArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }

@@ -24,7 +24,8 @@
 		2125903D235BCF390047523F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 21259038235BCF390047523F /* FMDatabaseQueue.m */; };
 		2125903E235BCF390047523F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 21259039235BCF390047523F /* FMResultSet.m */; };
 		21259041235BCF770047523F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21259040235BCF770047523F /* libsqlite3.tbd */; };
-		21259045235BFB770047523F /* favoriteMovies.db in Resources */ = {isa = PBXBuildFile; fileRef = 21259044235BFB770047523F /* favoriteMovies.db */; };
+		21C9CECB235C4B2D0092E47C /* movieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C9CECA235C4B2D0092E47C /* movieCell.swift */; };
+		21C9CECF235CE1370092E47C /* favoriteMovies.db in Resources */ = {isa = PBXBuildFile; fileRef = 21C9CECE235CE1370092E47C /* favoriteMovies.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +76,8 @@
 		21259038235BCF390047523F /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		21259039235BCF390047523F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		21259040235BCF770047523F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		21259044235BFB770047523F /* favoriteMovies.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = favoriteMovies.db; path = ../../../../favoriteMovies.db; sourceTree = "<group>"; };
+		21C9CECA235C4B2D0092E47C /* movieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieCell.swift; sourceTree = "<group>"; };
+		21C9CECE235CE1370092E47C /* favoriteMovies.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = favoriteMovies.db; path = ../../../../favoriteMovies.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +152,8 @@
 				21259024235BA7280047523F /* Results.swift */,
 				21259028235BA7540047523F /* Movie.swift */,
 				2125902A235BB5560047523F /* IanViewController.swift */,
-				21259044235BFB770047523F /* favoriteMovies.db */,
+				21C9CECA235C4B2D0092E47C /* movieCell.swift */,
+				21C9CECE235CE1370092E47C /* favoriteMovies.db */,
 			);
 			path = Lab4;
 			sourceTree = "<group>";
@@ -286,7 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21259045235BFB770047523F /* favoriteMovies.db in Resources */,
+				21C9CECF235CE1370092E47C /* favoriteMovies.db in Resources */,
 				21259001235BA2600047523F /* LaunchScreen.storyboard in Resources */,
 				21258FFE235BA2600047523F /* Assets.xcassets in Resources */,
 				21258FFC235BA25E0047523F /* Main.storyboard in Resources */,
@@ -320,6 +323,7 @@
 				2125903C235BCF390047523F /* FMDatabase.m in Sources */,
 				2125902B235BB5560047523F /* IanViewController.swift in Sources */,
 				2125903D235BCF390047523F /* FMDatabaseQueue.m in Sources */,
+				21C9CECB235C4B2D0092E47C /* movieCell.swift in Sources */,
 				21258FF7235BA25E0047523F /* FirstViewController.swift in Sources */,
 				2125903B235BCF390047523F /* FMDatabasePool.m in Sources */,
 				2125903E235BCF390047523F /* FMResultSet.m in Sources */,
