@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDataSource {
+class SecondViewController: UIViewController, UITableViewDataSource, UITabBarDelegate {
     
     
     @IBOutlet weak var table: UITableView!
@@ -18,9 +18,19 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        table.dataSource = self
         
+        table.dataSource = self
         loadDatabase()
+    }
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+         print("pls")
+        if(item.tag == 1) {
+            loadDatabase()
+        }
+        else if(item.tag == 2) {
+            loadDatabase()
+        }
     }
     
     func loadDatabase(){
@@ -54,11 +64,8 @@ class SecondViewController: UIViewController, UITableViewDataSource {
                         }
                         """.data(using: .utf8)!
                     
-                    print(jsonString)
                     let movie = try JSONDecoder().decode(Movie.self, from: jsonString)
-                    print(movie)
                     myArray.append(movie)
-                    print(myArray)
                 }
             } catch let error as NSError {
                     print("failed \(error)")

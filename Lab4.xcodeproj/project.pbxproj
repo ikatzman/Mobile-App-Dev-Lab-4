@@ -26,6 +26,7 @@
 		21259041235BCF770047523F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21259040235BCF770047523F /* libsqlite3.tbd */; };
 		21C9CECB235C4B2D0092E47C /* movieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C9CECA235C4B2D0092E47C /* movieCell.swift */; };
 		21C9CECF235CE1370092E47C /* favoriteMovies.db in Resources */ = {isa = PBXBuildFile; fileRef = 21C9CECE235CE1370092E47C /* favoriteMovies.db */; };
+		21C9CED1235D46710092E47C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C9CED0235D46700092E47C /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		21259040235BCF770047523F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		21C9CECA235C4B2D0092E47C /* movieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieCell.swift; sourceTree = "<group>"; };
 		21C9CECE235CE1370092E47C /* favoriteMovies.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = favoriteMovies.db; path = ../../../../favoriteMovies.db; sourceTree = "<group>"; };
+		21C9CED0235D46700092E47C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				2125902A235BB5560047523F /* IanViewController.swift */,
 				21C9CECA235C4B2D0092E47C /* movieCell.swift */,
 				21C9CECE235CE1370092E47C /* favoriteMovies.db */,
+				21C9CED0235D46700092E47C /* TabBar.swift */,
 			);
 			path = Lab4;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				21C9CECB235C4B2D0092E47C /* movieCell.swift in Sources */,
 				21258FF7235BA25E0047523F /* FirstViewController.swift in Sources */,
 				2125903B235BCF390047523F /* FMDatabasePool.m in Sources */,
+				21C9CED1235D46710092E47C /* TabBar.swift in Sources */,
 				2125903E235BCF390047523F /* FMResultSet.m in Sources */,
 				2125903A235BCF390047523F /* FMDatabaseAdditions.m in Sources */,
 				21259029235BA7540047523F /* Movie.swift in Sources */,

@@ -9,20 +9,32 @@
 import UIKit
 
 class IanViewController: UIViewController {
+    
+    var id = ""
+    var titleVal: String = "nothing"
+    var ratingVal: String = "nothing"
+    var scoreVal: String = "nothing"
+    var releaseVal: String = "nothing"
+    var bigImage: UIImage? = nil
 
-    var myLabelData: String = "nothing"
     @IBOutlet weak var theLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var releaseLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var highResImg: UIImageView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        print("calling init for ian vc")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        theLabel.text = myLabelData
+        theLabel.text = titleVal
+        ratingLabel.text = ratingVal
+        releaseLabel.text = releaseVal
+        scoreLabel.text = scoreVal
+        highResImg.image = bigImage
     }
     
     @IBAction func addToFavs(_ sender: Any) {
@@ -41,18 +53,5 @@ class IanViewController: UIViewController {
             }
         }
         contactDB.close()
-    
     }
-    
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        print("going to this vc \(segue.destination) from \(segue.source)")
-    }
-    
-
 }
